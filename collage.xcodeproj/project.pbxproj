@@ -14,6 +14,7 @@
 		59E0A6622066434100A60F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E0A6602066434100A60F71 /* LaunchScreen.storyboard */; };
 		59E0A66D2066434100A60F71 /* collageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A66C2066434100A60F71 /* collageTests.swift */; };
 		59E0A6782066434100A60F71 /* collageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A6772066434100A60F71 /* collageUITests.swift */; };
+		59E0A686206689DA00A60F71 /* MakeStampsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A685206689DA00A60F71 /* MakeStampsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		59E0A6732066434100A60F71 /* collageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E0A6772066434100A60F71 /* collageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collageUITests.swift; sourceTree = "<group>"; };
 		59E0A6792066434100A60F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59E0A685206689DA00A60F71 /* MakeStampsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStampsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				59E0A6572066434000A60F71 /* AppDelegate.swift */,
+				59E0A685206689DA00A60F71 /* MakeStampsViewController.swift */,
 				59E0A6592066434100A60F71 /* ViewController.swift */,
 				59E0A65B2066434100A60F71 /* Main.storyboard */,
 				59E0A65E2066434100A60F71 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E0A686206689DA00A60F71 /* MakeStampsViewController.swift in Sources */,
 				59E0A65A2066434100A60F71 /* ViewController.swift in Sources */,
 				59E0A6582066434000A60F71 /* AppDelegate.swift in Sources */,
 			);
@@ -427,7 +431,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQ44R4777H;
 				INFOPLIST_FILE = collage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.collage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +447,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQ44R4777H;
 				INFOPLIST_FILE = collage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.collage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
