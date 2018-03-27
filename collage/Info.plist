@@ -24,7 +24,7 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>NSCalendarsUsageDescription</key>
+	<key>NSCameraUsageDescription</key>
 	<string>カメラを呼び出します</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>フォトライブラリを呼び出します</string>
