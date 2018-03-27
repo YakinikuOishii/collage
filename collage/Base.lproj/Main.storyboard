@@ -50,7 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Fe-Dl-VC4"/>
                     <connections>
-                        <segue destination="hfh-hD-MFG" kind="show" id="JPY-ZT-ojp"/>
+                        <segue destination="hfh-hD-MFG" kind="show" identifier="toMakeStamps" id="JPY-ZT-ojp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="DjI-Se-DTt"/>
                     </view>
                     <connections>
-                        <outlet property="cameraImageView" destination="22x-dD-BZZ" id="31y-9Y-3VQ"/>
+                        <outlet property="cameraImageView" destination="22x-dD-BZZ" id="jTj-VU-i9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZT9-LI-UaI" userLabel="First Responder" sceneMemberID="firstResponder"/>

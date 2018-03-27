@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
-    var image: UIImage!
+    var originImage: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +32,23 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
     
-    // 選択した画像をアプリ内に表示
+    // 撮影が完了した時に呼ばれる
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        image = info[UIImagePickerControllerEditedImage] as? UIImage
-        dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "to", sender: nil)
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            originImage = image
+            dismiss(animated: true, completion: nil)
+            performSegue(withIdentifier: "toMakeStamps", sender: self)
+        }else{
+            print("撮影エラー")
+            dismiss(animated: true, completion: nil)
+        }
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toEditViewController" {
+        if segue.identifier == "toMakeStamps" {
             let nextVC: MakeStampsViewController = (segue.destination as? MakeStampsViewController)!
-            nextVC.originImage = image
+            nextVC.originImage = originImage
         }
     }
 

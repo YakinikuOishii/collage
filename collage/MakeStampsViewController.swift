@@ -15,6 +15,7 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("did")
         cameraImageView.image = originImage
         // Do any additional setup after loading the view.
     }
