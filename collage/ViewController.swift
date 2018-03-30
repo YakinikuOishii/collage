@@ -25,11 +25,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             picker.sourceType = .camera
             picker.delegate = self
             picker.allowsEditing = true
-            
             present(picker, animated: true, completion: nil)
+
         }else{
-            print("error")
+            print("起動エラー")
         }
+        performSegue(withIdentifier: "toMakeStamps", sender: self)
     }
     
     // 撮影が完了した時に呼ばれる
