@@ -18,7 +18,9 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
         super.viewDidLoad()
         print("did")
 //        cameraImageView.image = originImage
-        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: 10, y: 10, width: 50, height: 50))
+        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: 100, y: 95, width: 50, height: 50))
+        cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
+        cropImageView.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
     
