@@ -30,7 +30,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }else{
             print("起動エラー")
         }
-        performSegue(withIdentifier: "toMakeStamps", sender: self)
+//        performSegue(withIdentifier: "toMakeStamps", sender: self)
     }
     
     // 撮影が完了した時に呼ばれる
@@ -38,7 +38,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             originImage = image
             dismiss(animated: true, completion: nil)
-            performSegue(withIdentifier: "toMakeStamps", sender: self)
+            performSegue(withIdentifier: "toMakeStamps", sender: nil)
         }else{
             print("撮影エラー")
             dismiss(animated: true, completion: nil)

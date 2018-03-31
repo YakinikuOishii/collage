@@ -12,13 +12,17 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     
     @IBOutlet var cameraImageView: UIImageView!
     var originImage: UIImage!
+    @IBOutlet var cropImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("did")
-        cameraImageView.image = originImage
+//        cameraImageView.image = originImage
+        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: 10, y: 10, width: 50, height: 50))
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     override func didReceiveMemoryWarning() {
