@@ -11,8 +11,10 @@ import UIKit
 class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     @IBOutlet var cameraImageView: UIImageView!
-    var originImage: UIImage!
     @IBOutlet var cropImageView: UIImageView!
+    var originImage: UIImage!
+    
+    var tapLocation: CGPoint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,13 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
         // Do any additional setup after loading the view.
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        tapLocation = touch.location(in: self.view)
+        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: tapLocation.x, y: tapLocation.y, width: 50, height: 50))
+        cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
+        cropImageView.clipsToBounds = true
+    }
     
 
     override func didReceiveMemoryWarning() {
