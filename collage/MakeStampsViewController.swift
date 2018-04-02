@@ -19,8 +19,9 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         print("did")
-//        cameraImageView.image = originImage
+        cameraImageView.image = originImage
         cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: 100, y: 95, width: 50, height: 50))
+        //円形
         cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
         cropImageView.clipsToBounds = true
         // Do any additional setup after loading the view.
@@ -29,7 +30,7 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         tapLocation = touch.location(in: self.view)
-        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: tapLocation.x, y: tapLocation.y, width: 50, height: 50))
+        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: tapLocation.x - 30, y: tapLocation.y - 30, width: 60, height: 60))
         cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
         cropImageView.clipsToBounds = true
     }

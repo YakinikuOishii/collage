@@ -37,8 +37,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             originImage = image
-            dismiss(animated: true, completion: nil)
-            performSegue(withIdentifier: "toMakeStamps", sender: nil)
+            dismiss(animated: true, completion: {
+                self.performSegue(withIdentifier: "toMakeStamps", sender: nil)
+            })
         }else{
             print("撮影エラー")
             dismiss(animated: true, completion: nil)
