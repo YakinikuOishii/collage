@@ -13,24 +13,29 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     @IBOutlet var cameraImageView: UIImageView!
     @IBOutlet var cropImageView: UIImageView!
     var originImage: UIImage!
-    
+    // 表示されている画像の座標
     var tapLocation: CGPoint!
+    // 元の画像の座標
+    var originTapLocation: CGPoint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("did")
         cameraImageView.image = originImage
-        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: 100, y: 95, width: 50, height: 50))
+        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: 100, y: 95, width: 100, height: 100))
         //円形
         cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
         cropImageView.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         tapLocation = touch.location(in: self.view)
-        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: tapLocation.x - 30, y: tapLocation.y - 30, width: 60, height: 60))
+        //サイズの倍率を算出し、UIImage上でのタップ座標を求める
+        originTapLocation = CGPoint(x: originImage.size.width/cameraImageView.frame.width * tapLocation.x, y: originImage.size.height/cameraImageView.frame.height * tapLocation.y)
+        cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: originTapLocation.x - 50, y: originTapLocation.y - 50, width: 100, height: 100))
         cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
         cropImageView.clipsToBounds = true
     }
