@@ -17,6 +17,8 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     var tapLocation: CGPoint!
     // 元の画像の座標
     var originTapLocation: CGPoint!
+    
+    var saveRightEye = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,10 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
         cropImageView.image = cameraImageView.image?.cropping(to: CGRect(x: originTapLocation.x - 50, y: originTapLocation.y - 50, width: 100, height: 100))
         cropImageView.layer.cornerRadius = cropImageView.frame.width / 2
         cropImageView.clipsToBounds = true
+    }
+    
+    @IBAction func back() {
+        saveRightEye.set(cropImageView.image, forKey: "rightEye")
     }
     
 

@@ -17,6 +17,7 @@
 		59E0A686206689DA00A60F71 /* MakeStampsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A685206689DA00A60F71 /* MakeStampsViewController.swift */; };
 		59E0A690206FCBE700A60F71 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A68F206FCBE700A60F71 /* extension.swift */; };
 		59E0A69D206FD7E600A60F71 /* yukichi.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E0A69C206FD7E600A60F71 /* yukichi.png */; };
+		59E0A6A12074EE6800A60F71 /* CollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A6A02074EE6800A60F71 /* CollageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		59E0A685206689DA00A60F71 /* MakeStampsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStampsViewController.swift; sourceTree = "<group>"; };
 		59E0A68F206FCBE700A60F71 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		59E0A69C206FD7E600A60F71 /* yukichi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yukichi.png; path = ../../../haikei/yukichi.png; sourceTree = "<group>"; };
+		59E0A6A02074EE6800A60F71 /* CollageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				59E0A69C206FD7E600A60F71 /* yukichi.png */,
 				59E0A6572066434000A60F71 /* AppDelegate.swift */,
 				59E0A68F206FCBE700A60F71 /* extension.swift */,
+				59E0A6A02074EE6800A60F71 /* CollageViewController.swift */,
 				59E0A685206689DA00A60F71 /* MakeStampsViewController.swift */,
 				59E0A6592066434100A60F71 /* ViewController.swift */,
 				59E0A65B2066434100A60F71 /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				59E0A65A2066434100A60F71 /* ViewController.swift in Sources */,
 				59E0A6582066434000A60F71 /* AppDelegate.swift in Sources */,
 				59E0A690206FCBE700A60F71 /* extension.swift in Sources */,
+				59E0A6A12074EE6800A60F71 /* CollageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

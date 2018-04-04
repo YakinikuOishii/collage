@@ -47,10 +47,42 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
        
     }
     
+    @IBAction func openAlbum() {
+        // カメラロールを使えるかの確認
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
+            // カメラロールの画像を選択して画像を表示させるまでの一連の流れ
+            let picker = UIImagePickerController()
+            picker.sourceType = .photoLibrary
+            picker.delegate = self
+            
+            picker.allowsEditing = true
+            
+            present(picker, animated: true, completion: nil)
+        }else{
+            print("カメラロールエラー")
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            originImage = image
+            dismiss(animated: true, completion: {self.performSegue(withIdentifier: "toCollage", sender: nil)})
+        }else{
+            print("画像選択エラー")
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMakeStamps" {
             let nextVC: MakeStampsViewController = (segue.destination as? MakeStampsViewController)!
             nextVC.originImage = originImage
+        }
+        
+        if segue.identifier == "toCollage" {
+            let nextVC: CollageViewController = (segue.destination as? CollageViewController)!
+            nextVC.imageView.image = originImage
         }
     }
 
