@@ -11,13 +11,14 @@ import UIKit
 class CollageViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var rightEyeImage: UIImageView!
+    @IBOutlet var rightEyeImageView: UIImageView!
     
-    var saveRightEye = UserDefaults.standard
+    var appdelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//    var saveRightEye = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        rightEyeImage.image = saveRightEye.object(forKey: "rightEye") as? UIImage
+        rightEyeImageView.image = appdelegate.rightEyeImage
 
         // Do any additional setup after loading the view.
     }

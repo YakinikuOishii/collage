@@ -18,7 +18,9 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     // 元の画像の座標
     var originTapLocation: CGPoint!
     
-    var saveRightEye = UserDefaults.standard
+    var appdelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+//    var saveRightEye = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,7 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
     }
     
     @IBAction func back() {
-        saveRightEye.set(cropImageView.image, forKey: "rightEye")
+        appdelegate.rightEyeImage = cropImageView.image
     }
     
 
