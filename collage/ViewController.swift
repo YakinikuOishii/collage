@@ -36,6 +36,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     // 撮影が完了した時に呼ばれる
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            print("呼ばれた撮影")
             originImage = image
             dismiss(animated: true, completion: {
                 self.performSegue(withIdentifier: "toMakeStamps", sender: nil)
@@ -64,8 +65,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    // このメソッドが呼ばれない問題
+    func imagepicker(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            print("呼ばれたカメラロール")
             originImage = image
             dismiss(animated: true, completion: {self.performSegue(withIdentifier: "toCollage", sender: nil)})
         }else{
