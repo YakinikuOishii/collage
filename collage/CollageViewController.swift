@@ -10,6 +10,7 @@ import UIKit
 
 class CollageViewController: UIViewController {
     
+    var originImage: UIImage!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var rightEyeImageView: UIImageView!
     
@@ -18,6 +19,7 @@ class CollageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = originImage
         rightEyeImageView.image = appdelegate.rightEyeImage
 
         // Do any additional setup after loading the view.
