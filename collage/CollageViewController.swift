@@ -12,7 +12,7 @@ class CollageViewController: UIViewController {
     
     var originImage: UIImage!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var rightEyeImageView: UIImageView!
+    @IBOutlet var rightEyeButton: UIButton!
     
     var appdelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 //    var saveRightEye = UserDefaults.standard
@@ -20,8 +20,12 @@ class CollageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = originImage
-        rightEyeImageView.image = appdelegate.rightEyeImage
-
+        rightEyeButton.imageView?.image = appdelegate.rightEyeImage
+        rightEyeButton.layer.cornerRadius = rightEyeButton.frame.width / 2
+        rightEyeButton.clipsToBounds = true
+//        rightEyeImageView.image = appdelegate.rightEyeImage
+//        rightEyeImageView.layer.cornerRadius = rightEyeImageView.frame.width / 2
+//        rightEyeImageView.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 

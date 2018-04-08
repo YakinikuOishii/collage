@@ -52,7 +52,6 @@ class MakeStampsViewController: UIViewController,UIImagePickerControllerDelegate
             let picker = UIImagePickerController()
             picker.sourceType = .photoLibrary
             picker.delegate = self
-            
             picker.allowsEditing = true
             
             present(picker, animated: true, completion: nil)
