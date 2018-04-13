@@ -13,7 +13,10 @@ class CollageViewController: UIViewController {
     var originImage: UIImage!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var rightEyeButton: UIButton!
+    
+    var stampImageView: UIImageView!
 
+    var touchCount: Int = 0
     
     var appdelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 //    var saveRightEye = UserDefaults.standard
@@ -27,6 +30,47 @@ class CollageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch = touches.first!
+        let location: CGPoint = touch.location(in: self.view)
+        
+        stampImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        stampImageView.layer.cornerRadius = stampImageView.frame.width / 2
+        stampImageView.clipsToBounds = true
+        
+        print("indexは\(touchCount)")
+        print("locationは\(location)")
+        
+        if touchCount <= 1 {
+            touchCount = touchCount + 1
+        }
+        
+        
+        if touchCount <= 1 {
+            let image: UIImage = (rightEyeButton.imageView?.image)!
+            stampImageView.image = image
+            
+            stampImageView.center = CGPoint(x: location.x, y: location.y)
+            
+            self.view.addSubview(stampImageView)
+        }
+        
+        
+    }
+    
+//    @IBAction func stamp() {
+//
+//    }
+    
+    @IBAction func remove() {
+        print("呼ばれた")
+        touchCount = touchCount - 1
+        if touchCount == 0 {
+            self.stampImageView.removeFromSuperview()
+
+        }
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
