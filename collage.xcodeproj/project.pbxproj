@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		595CA87F2080FB4F001419F6 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 595CA87E2080FB4F001419F6 /* button.png */; };
 		59E0A6582066434000A60F71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A6572066434000A60F71 /* AppDelegate.swift */; };
 		59E0A65A2066434100A60F71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0A6592066434100A60F71 /* ViewController.swift */; };
 		59E0A65D2066434100A60F71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E0A65B2066434100A60F71 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		595CA87E2080FB4F001419F6 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../../../haikei/button.png; sourceTree = "<group>"; };
 		59E0A6542066434000A60F71 /* collage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E0A6572066434000A60F71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59E0A6592066434100A60F71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		59E0A6562066434000A60F71 /* collage */ = {
 			isa = PBXGroup;
 			children = (
+				595CA87E2080FB4F001419F6 /* button.png */,
 				59E0A69C206FD7E600A60F71 /* yukichi.png */,
 				59E0A6572066434000A60F71 /* AppDelegate.swift */,
 				59E0A68F206FCBE700A60F71 /* extension.swift */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59E0A69D206FD7E600A60F71 /* yukichi.png in Resources */,
+				595CA87F2080FB4F001419F6 /* button.png in Resources */,
 				59E0A6622066434100A60F71 /* LaunchScreen.storyboard in Resources */,
 				59E0A65F2066434100A60F71 /* Assets.xcassets in Resources */,
 				59E0A65D2066434100A60F71 /* Main.storyboard in Resources */,
