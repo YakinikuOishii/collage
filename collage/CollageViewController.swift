@@ -39,38 +39,47 @@ class CollageViewController: UIViewController {
         stampImageView.layer.cornerRadius = stampImageView.frame.width / 2
         stampImageView.clipsToBounds = true
         
-        print("indexは\(touchCount)")
+        
+        
+//        if touchCount == 1 {
+//            touchCount = touchCount + 1
+//        }
+        
+        print("countは\(touchCount)")
         print("locationは\(location)")
         
-        if touchCount <= 1 {
-            touchCount = touchCount + 1
-        }
-        
-        
-        if touchCount <= 1 {
+//        if touchCount == 1 {
             let image: UIImage = (rightEyeButton.imageView?.image)!
             stampImageView.image = image
             
             stampImageView.center = CGPoint(x: location.x, y: location.y)
             
             self.view.addSubview(stampImageView)
-        }
+//            touchCount = touchCount + 1
+//        }
         
         
     }
     
 //    @IBAction func stamp() {
-//
+//        if touchCount == 0 {
+//            touchCount = touchCount + 1
+//        }
 //    }
     
-    @IBAction func remove() {
-        print("呼ばれた")
-        touchCount = touchCount - 1
-        if touchCount == 0 {
-            self.stampImageView.removeFromSuperview()
-
+    @IBAction func delete() {
+        //サブビューがいくつ乗っているか取得
+        print("デリート呼ばれたよ")
+        print(self.view.subviews.count)
+        if self.view.subviews.count > 4 {
+            print("デリート")
+            print(self.view.subviews.count)
+            
+            let lastSubView = self.view.subviews.last!
+            lastSubView.removeFromSuperview()
         }
-            }
+//        self.stampImageView.removeFromSuperview()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
