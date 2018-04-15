@@ -56,34 +56,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" image="yukichi.png" translatesAutoresizingMaskIntoConstraints="NO" id="22x-dD-BZZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evI-gA-fyE">
-                                <rect key="frame" x="44" y="345" width="91" height="91"/>
+                                <rect key="frame" x="46" y="368" width="91" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KdJ-9Y-4z6">
-                                <rect key="frame" x="182" y="345" width="92" height="92"/>
+                                <rect key="frame" x="183" y="368" width="92" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqr-hQ-JwD">
-                                <rect key="frame" x="99" y="453" width="123" height="64"/>
+                                <rect key="frame" x="100" y="476" width="123" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97034186119999999" green="0.80740499499999996" blue="0.88216501469999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="あそぶ"/>
                                 <connections>
                                     <action selector="openAlbum" destination="BYZ-38-t0r" eventType="touchUpInside" id="862-dE-aUe"/>
                                     <action selector="openAlbum" destination="hfh-hD-MFG" eventType="touchUpInside" id="iiZ-Pt-V74"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB2-Ob-qJ9">
-                                <rect key="frame" x="145" y="525" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <action selector="back" destination="hfh-hD-MFG" eventType="touchUpInside" id="Xnv-nn-mPd"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="PjE-mr-BMb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,10 +99,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yukichi.png" translatesAutoresizingMaskIntoConstraints="NO" id="iYQ-fJ-VWI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maD-zP-5mL">
                                 <rect key="frame" x="135" y="500" width="50" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,7 +108,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmB-aB-fUJ">
-                                <rect key="frame" x="115" y="359" width="90" height="90"/>
+                                <rect key="frame" x="16" y="359" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97034186119999999" green="0.80740499499999996" blue="0.88216501469999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="button.png"/>
@@ -130,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fby-u1-mJF">
-                                <rect key="frame" x="232" y="419" width="62" height="30"/>
+                                <rect key="frame" x="135" y="419" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="取り消し"/>
@@ -138,6 +125,20 @@
                                     <action selector="delete" destination="1sG-qZ-ga0" eventType="touchUpInside" id="9v1-n3-PQq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvd-Wn-gwP">
+                                <rect key="frame" x="245" y="412" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="delete" destination="1sG-qZ-ga0" eventType="touchUpInside" id="OC5-hE-O9k"/>
+                                    <action selector="save" destination="1sG-qZ-ga0" eventType="touchUpInside" id="gkb-qL-R6Y"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yukichi.png" translatesAutoresizingMaskIntoConstraints="NO" id="iYQ-fJ-VWI">
+                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fdi-iC-fxv"/>
@@ -145,6 +146,7 @@
                     <connections>
                         <outlet property="imageView" destination="iYQ-fJ-VWI" id="8fz-UK-idX"/>
                         <outlet property="rightEyeButton" destination="UmB-aB-fUJ" id="G4j-Lq-cm7"/>
+                        <outlet property="saveButton" destination="Wvd-Wn-gwP" id="oFe-ud-xgY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaQ-s6-kh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,7 +158,4 @@
         <image name="button.png" width="90" height="90"/>
         <image name="yukichi.png" width="320" height="320"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="lCg-0V-bua"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -10,16 +10,13 @@ import UIKit
 
 class CollageViewController: UIViewController {
     
-    var originImage: UIImage!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var rightEyeButton: UIButton!
+    @IBOutlet var saveButton: UIButton!
     
+    var originImage: UIImage!
     var stampImageView: UIImageView!
-
-    var touchCount: Int = 0
-    
     var appdelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-//    var saveRightEye = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,47 +36,48 @@ class CollageViewController: UIViewController {
         stampImageView.layer.cornerRadius = stampImageView.frame.width / 2
         stampImageView.clipsToBounds = true
         
-        
-        
-//        if touchCount == 1 {
-//            touchCount = touchCount + 1
-//        }
-        
-        print("countは\(touchCount)")
         print("locationは\(location)")
         
-//        if touchCount == 1 {
-            let image: UIImage = (rightEyeButton.imageView?.image)!
-            stampImageView.image = image
-            
-            stampImageView.center = CGPoint(x: location.x, y: location.y)
-            
-            self.view.addSubview(stampImageView)
-//            touchCount = touchCount + 1
-//        }
-        
-        
+        let image: UIImage = (rightEyeButton.imageView?.image)!
+        stampImageView.image = image
+        stampImageView.center = CGPoint(x: location.x, y: location.y)
+        imageView.addSubview(stampImageView)
     }
     
-//    @IBAction func stamp() {
-//        if touchCount == 0 {
-//            touchCount = touchCount + 1
-//        }
-//    }
+    @IBAction func save() {
+        let rect: CGRect = CGRect(x: 0, y: 20, width: 320, height: 320)
+        UIGraphicsBeginImageContext(rect.size)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let capture = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // フォトライブラリに保存
+        UIImageWriteToSavedPhotosAlbum(capture!, nil, nil, nil)
+        
+        let alert: UIAlertController = UIAlertController(title: "画像の保存", message: "カメラロールに保存しました", preferredStyle: .alert)
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { action in
+                    print("OKが押された")
+            })
+        )
+        present(alert, animated: true, completion: nil)
+    }
     
     @IBAction func delete() {
         //サブビューがいくつ乗っているか取得
         print("デリート呼ばれたよ")
-        print(self.view.subviews.count)
-        if self.view.subviews.count > 4 {
-            print("デリート")
-            print(self.view.subviews.count)
-            
-            let lastSubView = self.view.subviews.last!
+        print(imageView.subviews.count)
+        if imageView.subviews.count >= 1 {
+            let lastSubView = imageView.subviews.last!
             lastSubView.removeFromSuperview()
         }
-//        self.stampImageView.removeFromSuperview()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
